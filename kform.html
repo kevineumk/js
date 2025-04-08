@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation</title>
+  <style type="text/css">
+    .myf{
+      background-color: rgb(182, 103, 103);
+    }
+  </style>
+</head>
+<body>
+  <h2>Form Validation</h2>
+
+  <div name="myf">
+    <form id="myForm" onsubmit="return validateForm();">
+      <label>First Name: <input type="text" id="firstName"></label><br><br>
+      <label>Last Name: <input type="text" id="lastName"></label><br><br>
+      <label>Email: <input type="text" id="email"></label><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+  </div>
+
+  <script>
+    function validateForm() {
+      var firstName = document.getElementById("firstName").value;
+      var lastName = document.getElementById("lastName").value;
+      var email = document.getElementById("email").value;
+
+      if (firstName === ""||lastName === ""||email === "") {
+        alert("Please fill in all text fields. in the form");
+        return false;
+      }
+      else{
+        alert("submision suceessfully");
+
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>
